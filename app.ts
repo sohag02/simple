@@ -5,7 +5,7 @@ const port = 3000;
 
 // Middleware for logging
 const logger = (req: Request, res: Response, next: NextFunction) => {
-  console.log(`${req.method} ${req.url} - ${new Date().toISOString()}`);
+  console.log(`[${new Date().toISOString()}] - ${req.method} ${req.url}`);
   next();
 };
 
